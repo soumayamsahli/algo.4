@@ -1,0 +1,43 @@
+const insertion = (arr) => {
+    for (let i = 1 ; i < arr.length ; i++) {
+        
+        for( let j = i ; j > 0 ; j--) {
+            if (arr[j] < arr[j-1]){
+                const temp = arr [j] ;
+                arr [j] = arr [j-1] ;
+                arr [j-1] = temp
+            } 
+             
+        }
+        
+        
+    }
+
+    return console.log( arr)
+}
+
+insertion([12, 34, 10, 6, 40])
+
+/* ----------------ALGO---------------------
+
+for i form 1 to arr.length-1 step 1 do
+    
+    for j = i AND j > 0 ; step -1 do 
+       
+       if (arr[j] < arr [j-1] ) do
+           temp := arr[j]
+           arr[j] := arr[j-1]
+           arr [j-1] := temp 
+        else
+            break
+        end if
+    
+    end for
+
+end for
+
+write (arr)
+
+END
+
+*/
